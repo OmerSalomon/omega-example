@@ -2,9 +2,14 @@ def main():
     op = 0
     while op != -1:
         print("enter first operand")
-        num1 = int(input())
+        num1 = input()
         print("enter second operand")
-        num2 = int(input())
+        num2 = input()
+
+        if type(num1) != int or type(num2) != int:
+            print("input must be a number")
+            return
+
         print("choose 1 for addition, 2 for subtraction, 3 for multiplication, 4 for division, 5 for power")
         print("choose -1 for exit")
         op = int(input())
@@ -21,6 +26,7 @@ def main():
             power(num1, num2)
         else:
             print("Invalid choice. Please choose a valid operation.")
+            return
 
     print("bye bye")
 
