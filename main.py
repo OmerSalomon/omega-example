@@ -1,7 +1,6 @@
+import join_files
+import lets_map
 import optimus_prime
 
-
-
-
 if __name__ == '__main__':
-    optimus_prime.isPrime(111)
+    join_files.main()
