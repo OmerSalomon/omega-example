@@ -26,17 +26,24 @@ def culc():
 
     print("bye bye")
 
+# print num1 + num2
 def add(num1, num2):
     print(num1 + num2)
 
+# print num1 - num2
 def sub(num1, num2):
     print(num1 * num2)
 
+# print num1 * num2
 def mult(num1, num2):
     print(num1 * num2)
 
+# print num1 / num2
 def div(num1, num2):
     print(num1 / num2)
 
 def power(num1, num2):
     print(num1 ** num2)
+
+def main():
+    culc()

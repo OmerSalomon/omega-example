@@ -1,25 +1,28 @@
+# basic person class
 class Person:
     def __init__(self, first_name: str, last_name: str, age: int):
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
+# talker class inherit from person
+class Talker(Person):
     def talk(self, txt):
         pass
 
 
-
-class HappyTalker(Person):
+# happy talker class inherit from talker
+class HappyTalker(Talker):
     def talk(self, txt: str):
         print(f"{txt}!!!")
 
-
-class SlowTalker(Person):
+# slow talker class inherit from talker
+class SlowTalker(Talker):
     def talk(self, txt: str):
         print(' '.join(txt))
 
-
-class StutterTalker(Person):
+# stutter talker class inherit from talker
+class StutterTalker(Talker):
     def talk(self, txt: str):
         words = txt.split()
         stuttered_words = [''.join([word[0] * 2, word]) for word in words]
@@ -29,7 +32,7 @@ class StutterTalker(Person):
 
 def makeThemTalk(persons_list: list[Person], txt: str):
     for person in persons_list:
-        if person.age > 10:
+        if person.age > 10 and type(person) == Talker:
             person.talk(txt)
 
 

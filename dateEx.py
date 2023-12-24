@@ -1,10 +1,7 @@
 class Date:
     days_in_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
-    def __int__(self, day: int, month: int, year: int):
-        self.day = day
-        self.month = month
-        self.year = year
+    # constractor
     def __init__(self, string_date: str):
         date_arr = list(map(int, string_date.split('.')))
         if 0 <= date_arr[0] <= 31 and 0 <= date_arr[1] <= 12:
@@ -14,16 +11,19 @@ class Date:
         else:
             raise ValueError("Input is not valid")
 
+    # get the total days of the date
     def getTotalDays(self) -> int:
         return self.day + sum(self.days_in_month[:self.month + 1]) + self.year * 365
 
-
+    # get the string of the date
     def __str__(self):
         return f"{self.day}.{self.month}.{self.year}"
 
+    # get the absolute day diff between two dates
     def __sub__(self, date) -> int:
         return abs(self.getTotalDays() - date.getTotalDays())
 
+    # add date or number of date to other date
     def __add__(self, arg):
 
         days_to_add = 0
@@ -59,7 +59,6 @@ class Date:
 
     def __le__(self, date):
         return date.getTotalDays() - self.getTotalDays() <= 0
-
 
 
 def main():

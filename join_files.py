@@ -1,8 +1,4 @@
-def joinFiles():
-    str_file_1 = input()
-    str_file_2 = input()
-    str_file_3 = input()
-
+def joinFiles(str_file_1, str_file_2, str_file_3):
     file_1 = open(str_file_1, "rb")
     file_2 = open(str_file_2, "rb")
     file_3 = open(str_file_3, "wb")
@@ -16,8 +12,11 @@ def joinFiles():
 
 
 def main():
+    str_file_1 = input()
+    str_file_2 = input()
+    str_file_3 = input()
     try:
-        joinFiles()
+        joinFiles(str_file_1, str_file_2, str_file_3)
     except Exception as e:
         print(e)
 
