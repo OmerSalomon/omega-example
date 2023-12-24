@@ -4,6 +4,10 @@ class Person:
         self.last_name = last_name
         self.age = age
 
+    def talk(self, txt):
+        pass
+
+
 
 class HappyTalker(Person):
     def talk(self, txt: str):
