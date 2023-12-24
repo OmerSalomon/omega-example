@@ -33,5 +33,8 @@ def main():
     person1 = StutterTalker("omer", "salomon", 12)
     person2 = SlowTalker("omer", "salomon", 12)
     person3 = HappyTalker("omer", "salomon", 12)
-    person_list = {person1, person2, person3}
-    makeThemTalk(person_list, "I love cookie")
+    try:
+        person_list = [person1, person2, person3]
+        makeThemTalk(person_list, "I love cookie")
+    except Exception as e:
+        print(e)

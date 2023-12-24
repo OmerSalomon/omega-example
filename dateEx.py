@@ -62,9 +62,6 @@ class Date:
 
 
 
-
-
-
 def main():
     a = Date("11.00.11")
     b = Date("11.00.11")

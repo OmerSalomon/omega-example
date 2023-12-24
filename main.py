@@ -4,4 +4,4 @@ import society
 import words
 
 if __name__ == '__main__':
-    dateEx.main()
+    join_files.main()

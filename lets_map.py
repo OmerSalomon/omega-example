@@ -11,7 +11,9 @@ def main():
     def square(x):
         return x ** 2
 
-    result_list = map_my(square, original_list)
-
-    print(result_list)
+    try:
+        result_list = map_my(square, original_list)
+        print(result_list)
+    except Exception as e:
+        print(e)
 
